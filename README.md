@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @abhays02
--👀 I’m interested in AI, machine learning, open-source development, and building impactful software.
+👋 Hi, I’m @abhays02
+👀 I’m interested in AI, machine learning, open-source development, and building impactful software.
 
 🌱 I’m currently learning deep learning, system design, and full-stack web development.
 
