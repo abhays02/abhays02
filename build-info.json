@@ -1,8 +1,5 @@
 {
-  "sourceCommit": "fdaa6a43bad1c42510e5fc6ecb1bacebec352c31",
-  "sourceDirectory": "portfolio",
-  "hosting": "GitHub Pages",
-  "backend": false,
-  "hero": "cinematic-v2",
-  "builtAt": "2026-10-20T18:22:06.930336+00:00"
+  "sourceCommit": "182298511a0a73af1e2b53062e38ccb2499d8f11",
+  "design": "illustrated-world-v3",
+  "backend": false
 }
