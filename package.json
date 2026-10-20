@@ -1,0 +1,1 @@
+{"name":"abhay-portfolio-deployment","private":true,"type":"module","engines":{"node":"24.x"},"scripts":{"build":"npm --prefix portfolio run check && node portfolio/scripts/build-vercel.mjs","test":"npm --prefix portfolio test"}}

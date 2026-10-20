@@ -30,6 +30,16 @@ Native adapters are also included for OpenAI Responses (`AI_PROVIDER=openai`, `O
 
 Without a configured model and key, the clearly labelled local resume guide remains available. Live provider calls were not tested because no credentials were provided. API behavior is tested with provider mocks.
 
+## Vercel deployment
+
+The repository root includes `vercel.json` and three serverless entries under `api/`. Import `abhays02/abhays02` into Vercel with **Root Directory = repository root**, **Framework Preset = Other**, **Production Branch = main**. Build and output settings are supplied by `vercel.json`; no dependencies are needed. The profile README remains at the repository root.
+
+The build generates private server-side resume context from `content/resume.txt` and public project metadata, and publishes only `portfolio/dist` as static files. API entries reuse the tested provider adapters. No keys are included in the build output.
+
+Initially the local resume guide works without any AI credentials. In Vercel's environment settings, add `AI_PROVIDER=compatible`, `AI_BASE_URL`, `AI_MODEL`, `AI_API_KEY`, and `PUBLIC_ORIGIN` equal to the final HTTPS site origin. Add Turnstile keys before exposing a paid provider publicly. Redeploy after changing runtime variables. In-memory request limits are per serverless instance and are not a durable distributed budget; also configure provider billing caps and Vercel firewall limits.
+
+The existing static site stays available at https://abhays02.github.io/abhays02/. A Vercel configuration commit is not proof of a successful Vercel deployment; verify the deployment and its returned URL.
+
 ## Deployment
 
 Deploy the full Node application to a host that supports Node 22+, or use the Dockerfile. A static-only host serves the visual website and local guide but cannot provide `/api/chat`, `/api/status` or live GitHub sync.

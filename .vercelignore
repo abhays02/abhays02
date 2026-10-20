@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+!.env.example
+node_modules
+portfolio/.env
+portfolio/.env.*
+!portfolio/.env.example
+portfolio/test
+portfolio/dist/assets/icr-walkthrough.gif
