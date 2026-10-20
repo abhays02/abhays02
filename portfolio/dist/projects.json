@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ICR-Studios",
+    "title": "From scan to certainty",
+    "description": "A local, human-reviewed forms workspace with encrypted storage and traceable exports. Manual-review prototype; validated handwriting inference is not established.",
+    "language": "React / FastAPI",
+    "url": "https://github.com/abhays02/ICR-Studios",
+    "demo": "icr",
+    "demoLabel": "Real recorded review workflow",
+    "video": "assets/icr-walkthrough.mp4",
+    "poster": "assets/icr-studio.png",
+    "videoNote": "Recorded with fictional forms. Shows one human correction and draft export, not successful OCR or final approval. Recording predates the visual redesign.",
+    "preview": "assets/icr-studio.png"
+  },
+  {
+    "name": "grokking-silence",
+    "title": "The moment it clicks",
+    "description": "A small modular-arithmetic experiment exploring the gap between memorisation and generalisation, with raw logs and a recorded visual replay.",
+    "language": "Python / NumPy",
+    "url": "https://github.com/abhays02/grokking-silence",
+    "demo": "grokking",
+    "demoLabel": "Actual experiment recording",
+    "video": "assets/grokking.mp4",
+    "videoNote": "Repository recording of a small mod-47 experiment. A replay of one run, not a live training session."
+  },
+  {
+    "name": "support",
+    "title": "A clearer next step",
+    "description": "LLM-based support ticket classification with TF-IDF knowledge-base retrieval and suggested next actions.",
+    "language": "FastAPI / LLMs",
+    "url": "https://github.com/abhays02/support",
+    "demo": "support",
+    "demoLabel": "Interactive triage architecture explainer",
+    "video": null
+  },
+  {
+    "name": "abtmind-protocol",
+    "title": "Memory beyond a chat",
+    "description": "An open folder protocol for shared human and multi-AI memory, using versioned project context and a synced memory folder.",
+    "language": "Open protocol",
+    "url": "https://github.com/abhays02/abtmind-protocol",
+    "demo": "memory",
+    "demoLabel": "Interactive protocol explainer",
+    "video": null
+  }
+]

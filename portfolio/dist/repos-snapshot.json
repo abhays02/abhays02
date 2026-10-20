@@ -1,0 +1,131 @@
+{
+  "capturedAt": "2026-10-20",
+  "repos": [
+    {
+      "name": "ICR-Studios",
+      "description": "Self-hosted handwritten bank forms ICR engine with optimized local model inference, ORM-level encrypted storage, and a full-stack dark-mode demo.",
+      "url": "https://github.com/abhays02/ICR-Studios",
+      "language": "Python"
+    },
+    {
+      "name": "lab",
+      "description": "Small experiments behind posts: each folder is one question, one script, one real run. Deep research graduates to its own repo.",
+      "url": "https://github.com/abhays02/lab",
+      "language": "Python"
+    },
+    {
+      "name": "grokking-silence",
+      "description": "Grokking, reproduced small: 2-layer net on mod-47 addition memorizes in 60 epochs, generalizes at 19,700. Script, raw log, animated visual.",
+      "url": "https://github.com/abhays02/grokking-silence",
+      "language": "HTML"
+    },
+    {
+      "name": "abtmind-protocol",
+      "description": "Open folder protocol for shared human + multi-AI memory - one synced folder as the common memory bus",
+      "url": "https://github.com/abhays02/abtmind-protocol",
+      "language": "Code"
+    },
+    {
+      "name": "hms",
+      "description": "It is assignment that has HMS.",
+      "url": "https://github.com/abhays02/hms",
+      "language": "TypeScript"
+    },
+    {
+      "name": "support",
+      "description": "Support Ticket Triage Agent",
+      "url": "https://github.com/abhays02/support",
+      "language": "Python"
+    },
+    {
+      "name": "feastwala",
+      "description": "If you're a working professional, chances are you've struggled with eating healthily. Are you like most busy professionals, and on your way home from work, you realize that you're famished?",
+      "url": "https://github.com/abhays02/feastwala",
+      "language": "JavaScript"
+    },
+    {
+      "name": "autonomous-drone",
+      "description": "",
+      "url": "https://github.com/abhays02/autonomous-drone",
+      "language": "Code"
+    },
+    {
+      "name": "fakenews-Detection",
+      "description": "Ai Fake News Detector",
+      "url": "https://github.com/abhays02/fakenews-Detection",
+      "language": "Python"
+    },
+    {
+      "name": "Movie-Recommendation-System",
+      "description": "Recommender systems are powerful techniques widely used to suggest items or  products to users based on their preferences, aiming to enhance the user experience  by offering personalized recommendations.",
+      "url": "https://github.com/abhays02/Movie-Recommendation-System",
+      "language": "Jupyter Notebook"
+    },
+    {
+      "name": "STMS",
+      "description": "",
+      "url": "https://github.com/abhays02/STMS",
+      "language": "Python"
+    },
+    {
+      "name": "docbot",
+      "description": "chat bot",
+      "url": "https://github.com/abhays02/docbot",
+      "language": "Python"
+    },
+    {
+      "name": "vector-extractor",
+      "description": "",
+      "url": "https://github.com/abhays02/vector-extractor",
+      "language": "PureBasic"
+    },
+    {
+      "name": "vector-detector",
+      "description": "",
+      "url": "https://github.com/abhays02/vector-detector",
+      "language": "Python"
+    },
+    {
+      "name": "Acps",
+      "description": "automatic check Processing",
+      "url": "https://github.com/abhays02/Acps",
+      "language": "Python"
+    },
+    {
+      "name": "boba",
+      "description": "",
+      "url": "https://github.com/abhays02/boba",
+      "language": "TypeScript"
+    },
+    {
+      "name": "wed",
+      "description": "",
+      "url": "https://github.com/abhays02/wed",
+      "language": "HTML"
+    },
+    {
+      "name": "volumecontrol",
+      "description": "Volume Control is source code of an idea that we can control volume just by using hands.",
+      "url": "https://github.com/abhays02/volumecontrol",
+      "language": "Python"
+    },
+    {
+      "name": "taxiapp",
+      "description": "",
+      "url": "https://github.com/abhays02/taxiapp",
+      "language": "Code"
+    },
+    {
+      "name": "taxiapp1",
+      "description": "",
+      "url": "https://github.com/abhays02/taxiapp1",
+      "language": "Code"
+    },
+    {
+      "name": "yourchoice",
+      "description": "",
+      "url": "https://github.com/abhays02/yourchoice",
+      "language": "Code"
+    }
+  ]
+}

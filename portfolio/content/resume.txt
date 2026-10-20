@@ -1,0 +1,95 @@
+Abhay Shukla
+AI ENGINEER WITH FULL-STACK AND MLOPS EXPERIENCE
+Mohali, Punjab, India | Open to remote and relocation | +91 9599718602 | shuklaabhay075@gmail.com
+linkedin.com/in/abhays02 | github.com/abhays02
+
+
+SUMMARY
+
+AI Engineer and full-stack developer who gets called in for the work that has not been scoped yet: the R&D
+question nobody has answered, the performance problem nobody can locate, the product that needs building
+from scratch. Shipping products since 2019, in AI and machine learning roles since 2023: LLM and RAG
+systems, agentic automation, computer vision and multilingual speech-to-text, plus the backends, APIs and
+MLOps pipelines they run on. Python-first across AWS, Azure and GCP.
+
+   Took a 14-second page load down to under 1 second by finding three redundant database round trips
+   hidden in a microservice chain, on an encrypted table of 40,000+ patient records.
+   6x faster claims processing after replacing a manual revenue cycle workflow with agentic automation.
+   Sub-second multilingual speech-to-text across several Indian regional languages, running in production.
+
+SKILLS
+
+Machine Learning and AI: Python, PyTorch, TensorFlow, YOLO, deep learning, natural language processing
+(NLP), computer vision, face detection, OCR, ICR, speech-to-text (STT) and text-to-speech (TTS), Qiskit
+Generative AI: large language models, retrieval-augmented generation (RAG), LangChain, LlamaIndex,
+agentic AI, prompt engineering, vector databases (Pinecone, Turbopuffer), SGLang, model fine-tuning,
+model compression
+MLOps and Infrastructure: MLflow, H2O MLOps, Kubernetes, Docker, CI/CD, Apache Airflow, Grafana,
+Prometheus, edge deployment, model monitoring, performance profiling, distributed systems debugging
+Cloud and Data: AWS, Azure, Google Cloud Platform, Amazon SageMaker, Apache Kafka, MQTT, MongoDB,
+PostgreSQL, Firebase, SCADA
+Software Engineering: FastAPI, Django, REST APIs, Node.js, React, Flutter, JavaScript, PHP, Go, Git, Three.js
+
+PROFESSIONAL EXPERIENCE
+
+AI Engineer
+Yosemite MD Solution, Mohali (hybrid) | March 2026 to June 2026
+   Built agentic automation for revenue cycle management (RCM) that processed claims data six times faster
+   than the manual process it replaced and removed most of the hand-off work for the billing team.
+   Shipped voice agents on a speech-to-text and text-to-speech pipeline to handle routine patient and payer
+   calls, plus a SOAP note transcription service that cut the corrections doctors made before signing off.
+   Traced a 14-second load on the patient records screen to three redundant round trips between microservices
+   and an encrypted 40,000-record table. Consolidated them into a single query path and brought full load time
+   to 600 milliseconds, staying under 1 second at peak.
+
+Software Developer (Contract)
+Independent Contractor, Remote | January 2026 to March 2026
+   Stabilised a Node.js edtech platform, and built a web application for LessPay, a fintech startup, covering
+   transaction processing and user management from scratch.
+   Built an OCR pipeline for a tax planning platform that detected, extracted and classified line items from
+   transaction PDFs, then fed the parsed data into regenerated reports with charts.
+
+AI/ML Associate (MLOps Engineer)
+Aaizel International Technologies, Remote | August 2025 to December 2025
+   Trained and deployed a multilingual speech-to-text model covering several Indian regional languages, tuned
+   to return results in under a second.
+   Built a multi-module radiosonde data parser on MQTT and Kafka, and automated SCADA workflows using
+   satellite data for predictive validation.
+   Led a real-time face detection build with active and passive liveness checks for a surveillance product.
+   Automated retraining with MLflow and Kubernetes, and served predictions through FastAPI REST APIs.
+
+AI Engineer
+Sofly Innovation Pvt Ltd, Chandigarh | August 2024 to July 2025
+   Built computer vision applications on drone imagery in Python and TensorFlow, reworking preprocessing and
+   feature extraction to run 30 percent faster, and compressed models for edge devices to cut inference latency.
+   Developed RAG pipelines with LangChain and LlamaIndex for conversational AI features used by
+   paying customers.
+   Designed the natural language interface for a SaaS chatbot and raised answer accuracy by roughly 25
+   percent through better retrieval and prompting.
+
+Co-founder and Technical Lead
+Aerwolf Technology (drone technology startup) | January 2023 to July 2024
+   Built the product end to end: flight control software integrated with GPS and IoT sensors, with automated field
+   mapping for precision agriculture.
+   Designed and proposed a hydrogen fuel cell drone platform to extend flight endurance beyond battery limits.
+
+Founder and Product Developer
+Hostsac (web hosting and development agency) | June 2019 to January 2023
+   Ran a web hosting and development agency, shipping custom websites, Flutter Android apps and
+   progressive web apps in PHP and Laravel, with CI/CD set up for releases and the servers managed end
+   to end.
+   Delivered customised CRM, CMS and SaaS solutions for early-stage startups, from first build through
+   deployment and support. Exited the business in 2023.
+
+EDUCATION
+
+B.E. Computer Science and Engineering, Honours in AI and ML
+Chandigarh University, Punjab | 2021 to 2025
+Class XII, Science, CBSE | Green Fields School, New Delhi | 2021
+
+CERTIFICATIONS
+
+AI Fluency for Builders, Anthropic, 2026. Verify: verify.skilljar.com/c/ges8a54g77o6
+AI Fluency Framework and Foundations, Anthropic, 2026. Verify: verify.skilljar.com/c/jcudt7yty2mp
+Raspberry Pi and Arduino, Packt, 2025. Verify: coursera.org/account/accomplishments/records/3Y42AXW747Q2
+

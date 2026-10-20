@@ -1,0 +1,42 @@
+[
+  {
+    "name": "fakenews-Detection",
+    "title": "Signal over noise",
+    "description": "Browser extension and FastAPI backend for classifying news articles using a trained ML model and TF-IDF vectorization.",
+    "language": "Python",
+    "url": "https://github.com/abhays02/fakenews-Detection",
+    "demo": "news",
+    "demoLabel": "Interactive pipeline explainer",
+    "video": null
+  },
+  {
+    "name": "Movie-Recommendation-System",
+    "title": "Your next great watch",
+    "description": "A Python notebook exploring movie recommendations with the TMDB 5000 dataset, NumPy, Pandas and scikit-learn.",
+    "language": "Python / Jupyter",
+    "url": "https://github.com/abhays02/Movie-Recommendation-System",
+    "demo": "movies",
+    "demoLabel": "Interactive recommendation concept",
+    "video": null
+  },
+  {
+    "name": "Acps",
+    "title": "From paper to pipeline",
+    "description": "Automatic check processing repository with processors, templates and supporting utilities.",
+    "language": "Python",
+    "url": "https://github.com/abhays02/Acps",
+    "demo": "checks",
+    "demoLabel": "Interactive processing explainer",
+    "video": null
+  },
+  {
+    "name": "feastwala",
+    "title": "A better everyday meal",
+    "description": "An open-source food subscription portal with menu browsing, online ordering and a responsive web experience.",
+    "language": "JavaScript / EJS",
+    "url": "https://github.com/abhays02/feastwala",
+    "demo": "food",
+    "demoLabel": "Interactive product concept",
+    "video": null
+  }
+]
