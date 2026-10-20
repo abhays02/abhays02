@@ -13,3 +13,29 @@ test('optional Turnstile checks hostname before calling AI',async()=>{let calls=
 test('Gemini and Anthropic adapters parse structured replies',async()=>{for(const provider of['gemini','anthropic']){const r=await handleApi(req({message:'hello'}),{...env,AI_PROVIDER:provider,GEMINI_API_KEY:'g',ANTHROPIC_API_KEY:'a'},{...deps(),fetch:async()=>Response.json(provider==='gemini'?{candidates:[{content:{parts:[{text:'Verified answer'}]}}]}:{content:[{type:'text',text:'Verified answer'}]})});assert.equal((await r.json()).answer,'Verified answer')}});
 test('OpenAI responses adapter extracts output text',async()=>{const r=await handleApi(req({message:'hello'}),{...env,AI_PROVIDER:'openai',OPENAI_API_KEY:'key'},{...deps(),fetch:async()=>Response.json({output:[{content:[{type:'output_text',text:'Answer'}]}]})});assert.equal((await r.json()).answer,'Answer')});
 test('GitHub integration filters forks, archived and other owners',async()=>{const r=await handleApi(new Request('https://studio.example/api/repos'),{}, {fetch:async()=>Response.json([{name:'one',owner:{login:'abhays02'},description:'test',language:'Python'},{name:'fork',fork:true,owner:{login:'abhays02'}},{name:'archived',archived:true,owner:{login:'abhays02'}},{name:'outsider',owner:{login:'someone'}}])});const data=await r.json();assert.deepEqual(data.repos.map(x=>x.name),['one']);assert.equal(data.repos[0].url,'https://github.com/abhays02/one')});
+
+test('Gateway uses server OIDC, free default, fixed endpoint and resume priority',async()=>{
+ const calls=[];const token='test-server-oidc';
+ const gatewayEnv={VERCEL_OIDC_TOKEN:token,RESUME_CONTEXT:'PRIMARY RESUME: Abhay studied AI/ML.'};
+ const response=await handleApi(req({message:'Education?',model:'paid-model',apiKey:'browser-key'}),gatewayEnv,{...deps(),fetch:async(url,options)=>{
+  calls.push({url,options});
+  if(url.endsWith('/models'))return Response.json({data:[{id:'nvidia/nemotron-3.5-lightning-free',type:'language',pricing:{input:'0',output:'0'}}]});
+  return Response.json({choices:[{message:{content:'Abhay studied AI/ML.'}}]});
+ }});
+ assert.equal(response.status,200);assert.equal((await response.json()).mode,'ai');
+ assert.equal(calls[1].url,'https://ai-gateway.vercel.sh/v1/chat/completions');
+ assert.equal(calls[1].options.headers.Authorization,'Bearer '+token);
+ const payload=JSON.parse(calls[1].options.body);assert.equal(payload.model,'nvidia/nemotron-3.5-lightning-free');
+ assert(payload.messages[0].content.includes('resume is the primary authority'));
+ assert(payload.messages[0].content.includes('PRIMARY RESUME'));assert(!payload.providerOptions);
+ const status=await handleApi(new Request('https://studio.example/api/status'),gatewayEnv);
+ const statusText=await status.text();assert.equal(JSON.parse(statusText).aiEnabled,true);assert(!statusText.includes(token));
+});
+test('Gateway never calls inference when model pricing changes or cannot be verified',async()=>{
+ for(const entry of [null,{type:'language',pricing:{input:'0.00001',output:'0'}},{type:'language',pricing:{input:'0',output:'0',varies_by_provider:true}},{type:'evaluation',pricing:{input:'0',output:'0'}}]){
+  let calls=0;const response=await handleApi(req({message:'Skills?'}),{AI_GATEWAY_API_KEY:'private-key'}, {...deps(),fetch:async()=>{calls++;return Response.json({data:entry?[{id:'nvidia/nemotron-3.5-lightning-free',...entry}]:[]})}});
+  assert.equal(response.status,503);assert.equal((await response.json()).code,'FREE_MODEL_UNAVAILABLE');assert.equal(calls,1);
+ }
+ const response=await handleApi(req({message:'Skills?'}),{AI_GATEWAY_API_KEY:'private-key'},{...deps(),fetch:async()=>{throw Error('catalog unavailable')}});
+ assert.equal(response.status,503);
+});

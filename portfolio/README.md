@@ -12,7 +12,17 @@ npm start
 
 Open `http://localhost:4173`. Use `npm test` for API and HTTP integration tests and `npm run check` for JavaScript syntax checks. The server serves only `dist/`; source files, environment files and resume context are not exposed as static files.
 
-## Add an AI provider later
+## Resume-grounded AI Gateway
+
+Vercel deployments automatically use the project's server-side `VERCEL_OIDC_TOKEN` when no other provider is explicitly configured. No long-lived API key is needed. The OpenAI-compatible endpoint is `https://ai-gateway.vercel.sh/v1/chat/completions` and the default model is `nvidia/nemotron-3.5-lightning-free`.
+
+Before every inference request, the backend verifies the selected language model has zero input and output token prices in the live Gateway catalog, with no variable provider pricing. A missing model, paid price, or failed catalog lookup disables that request and leaves the local resume guide available. No paid model fallback is configured. Free availability and platform quotas can change; hosting charges are separate from model token prices.
+
+The supplied resume (`content/resume.txt`, extracted from the original PDF) is the primary source for career, education, skills, achievements and contact details. Curated repository summaries add project information. Unknown facts must be acknowledged rather than invented. The build packages these sources privately for the server; visitors cannot choose the system prompt, model, endpoint or credentials. Model answers can still be mistaken; update the resume source and redeploy when facts change.
+
+To use a Gateway API key instead of deployment identity, add `AI_GATEWAY_API_KEY` as a sensitive runtime environment variable in Vercel, then redeploy. Never commit it or put it in browser settings. Outside Vercel, also set `AI_PROVIDER=gateway`. Leave `AI_MODEL` unset for the free default, or select another zero-price language model; the price check still applies. Explicit configurations for other providers retain their own billing behavior.
+
+## Other OpenAI-compatible providers
 
 Copy `.env.example` to `.env` locally, then set:
 
@@ -28,7 +38,7 @@ Restart the server. OpenAI-compatible providers use `/chat/completions` appended
 
 Native adapters are also included for OpenAI Responses (`AI_PROVIDER=openai`, `OPENAI_API_KEY`), Anthropic Messages (`AI_PROVIDER=anthropic`, `ANTHROPIC_API_KEY`) and Gemini GenerateContent (`AI_PROVIDER=gemini`, `GEMINI_API_KEY`). All use `AI_MODEL`. No default paid model is selected. The browser cannot override endpoints, keys or models. HTTPS is required for compatible endpoints, with a loopback exception for local development.
 
-Without a configured model and key, the clearly labelled local resume guide remains available. Live provider calls were not tested because no credentials were provided. API behavior is tested with provider mocks.
+Without a configured model and key, the clearly labelled local resume guide remains available. Provider adapters and free-model enforcement are covered by API tests. Verify the deployed `/api/chat` response when enabling or changing a provider.
 
 ## Vercel deployment
 
@@ -36,7 +46,7 @@ The repository root includes `vercel.json` and three serverless entries under `a
 
 The build generates private server-side resume context from `content/resume.txt` and public project metadata, and publishes only `portfolio/dist` as static files. API entries reuse the tested provider adapters. No keys are included in the build output.
 
-Initially the local resume guide works without any AI credentials. In Vercel's environment settings, add `AI_PROVIDER=compatible`, `AI_BASE_URL`, `AI_MODEL`, `AI_API_KEY`, and `PUBLIC_ORIGIN` equal to the final HTTPS site origin. Add Turnstile keys before exposing a paid provider publicly. Redeploy after changing runtime variables. In-memory request limits are per serverless instance and are not a durable distributed budget; also configure provider billing caps and Vercel firewall limits.
+Gateway uses Vercel's automatic deployment identity by default; leave `AI_PROVIDER`, `AI_MODEL` and provider key variables unset for this configuration. Set `PUBLIC_ORIGIN` only when pinning a single public origin is needed; production aliases work automatically otherwise. Optional `AI_GATEWAY_API_KEY` overrides deployment identity. For a different provider, explicitly set its configuration as above. Add Turnstile keys before exposing a paid provider publicly. Redeploy after changing runtime variables. In-memory request limits are per serverless instance and are not a durable distributed budget; also configure provider billing caps and Vercel firewall limits.
 
 The existing static site stays available at https://abhays02.github.io/abhays02/. A Vercel configuration commit is not proof of a successful Vercel deployment; verify the deployment and its returned URL.
 
