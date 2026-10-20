@@ -4,7 +4,7 @@ A cinematic CV and portfolio for Abhay Shukla, with a live cinematic studio entr
 
 ## Run
 
-Use Node.js 22 or later. No npm dependencies are required.
+Use Node.js 22 or later. Run `npm ci` at the repository root to install the Vercel runtime identity helper.
 
 ```sh
 npm start
@@ -14,7 +14,7 @@ Open `http://localhost:4173`. Use `npm test` for API and HTTP integration tests 
 
 ## Resume-grounded AI Gateway
 
-Vercel deployments automatically use the project's server-side `VERCEL_OIDC_TOKEN` when no other provider is explicitly configured. No long-lived API key is needed. The OpenAI-compatible endpoint is `https://ai-gateway.vercel.sh/v1/chat/completions` and the default model is `nvidia/nemotron-3.5-lightning-free`.
+Vercel deployments automatically use the project's server-side OIDC identity (fresh runtime context, with `VERCEL_OIDC_TOKEN` as a fallback) when no other provider is explicitly configured. No long-lived API key is needed. The OpenAI-compatible endpoint is `https://ai-gateway.vercel.sh/v1/chat/completions` and the default model is `nvidia/nemotron-3.5-lightning-free`.
 
 Before every inference request, the backend verifies the selected language model has zero input and output token prices in the live Gateway catalog, with no variable provider pricing. A missing model, paid price, or failed catalog lookup disables that request and leaves the local resume guide available. No paid model fallback is configured. Free availability and platform quotas can change; hosting charges are separate from model token prices.
 
@@ -42,7 +42,7 @@ Without a configured model and key, the clearly labelled local resume guide rema
 
 ## Vercel deployment
 
-The repository root includes `vercel.json` and three serverless entries under `api/`. Import `abhays02/abhays02` into Vercel with **Root Directory = repository root**, **Framework Preset = Other**, **Production Branch = main**. Build and output settings are supplied by `vercel.json`; no dependencies are needed. The profile README remains at the repository root.
+The repository root includes `vercel.json` and three serverless entries under `api/`. Import `abhays02/abhays02` into Vercel with **Root Directory = repository root**, **Framework Preset = Other**, **Production Branch = main**. Build and output settings are supplied by `vercel.json`; Vercel installs the runtime identity helper from the root lockfile. The profile README remains at the repository root.
 
 The build generates private server-side resume context from `content/resume.txt` and public project metadata, and publishes only `portfolio/dist` as static files. API entries reuse the tested provider adapters. No keys are included in the build output.
 
