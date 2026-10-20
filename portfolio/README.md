@@ -1,6 +1,6 @@
 # Abhay Studio
 
-A cinematic CV and portfolio for Abhay Shukla, with a live cinematic studio entrance, pinned scroll sequence, a Three.js neural scene, rotating GitHub gallery, project recordings, resume-grounded guide, and optional server-side AI.
+A cinematic CV and portfolio for Abhay Shukla, with an illustrated interactive world, scroll-driven career map, project card box, recordings, resume-grounded guide, and server-side AI Gateway.
 
 ## Run
 
@@ -79,7 +79,7 @@ The existing website is published through the `gh-pages` branch of `abhays02/abh
 
 To replace the camera-motion entrance with an approved animated take, save the video to `dist/assets/studio-camera.mp4`. Keep `intro.mp4` as the separate titled promo or re-render it using the new take. Do not re-use the user's reference reel as their own work.
 
-The browser surface is unavailable in this environment, so responsive visual QA, scroll choreography, focus behavior, autoplay and WebGL rendering still require browser review. See `design-qa.md`.
+Chromium is available for the current redesign. See `design-qa.md` for the rendered desktop and mobile verification.
 
 ## Editing
 
@@ -94,12 +94,14 @@ The browser surface is unavailable in this environment, so responsive visual QA,
 
 Fonts and the Three.js bundle were reused from the user's existing portfolio artifact. They remain local, so the visual site has no CDN dependency.
 
-## Cinematic hero update
+## Illustrated world redesign
 
-The hero follows the supplied reel's sequence: eye close-up, pullback to the character and room, oversized name reveal, then a scroll-driven transition to a smaller portrait beside the introduction. It runs in the hero itself; the old separate timed opening overlay is removed.
+The current visual reference is James Chugh’s portfolio, captured in Chromium on October 21, 2026 (India time). The active page uses one consistent direction: a full-viewport illustrated lake valley, anchored landmark buttons, large Bricolage Grotesque headings, charcoal sections, yellow controls and floating bottom navigation.
 
-`hero-scene.js` manages playback, dragging, pointer parallax, keyboard scrubbing, replay, visibility and reduced-motion behavior. `hero-timeline.js` maps time and scroll to camera/portrait states. `hero-renderer.js` composites an original eye close-up, generated clean background and four transparent character keyframes using Canvas 2D at up to 30 fps. Character poses include typing, blinking, looking up and greeting. This is an interactive layered animation with four pose assets, not a fully rigged character film or a newly generated 15-second video. Krea generation remains unavailable due to zero credits.
+Original matching day/night landscapes, a city-map illustration, and a wooden project box were generated for this portfolio. James Chugh’s personal artwork, identity, employers and case-study claims are not reused. Career stops, education and outcomes come from Abhay’s supplied resume; project descriptions and recordings are retained from the existing portfolio.
 
-The public asset package is under one megabyte for the new scene. The local CV guide moves immediately below the cinematic hero so controls do not overlap. The existing work, experience, skills and server-side AI implementation remain available.
+The hero gently pushes into the scene as the visitor scrolls, with small night fireflies. Day/night state persists locally. Career landmarks open the seven-stop journey; the map supports scroll progression, explicit stop selection, zoom and desktop dragging. Projects open actual recordings or clearly labelled architecture explainers. Toolkit buttons unpack and explain the tools; paper notes and the about-board items can be dragged. Optional ambience is synthesized locally with Web Audio after a click; no music autoplays. Reduced-motion users get a static hero and explicit journey controls.
 
-Native Canvas renders of the production renderer were inspected at 1600×900 and 390×844. This caught and corrected an initial mobile face crop. These are renderer checks, not browser screenshots: browser interaction/visual QA remains unverified in this environment.
+`dist/app.js` controls these interactions and the existing same-origin AI guide. `dist/projects.js` controls the project cards and recorded/interactive demos. The previous studio renderer files remain as inactive source assets and are not loaded by the page. They can be revisited independently; they are not the current intro.
+
+Browser checks cover 1600×1000 desktop, 390×844 mobile, keyboard dialog dismissal, both themes, map controls, project recordings, explainer steps, toolkit, local resume fallback, reduced motion, image loading, console errors and horizontal overflow. See `design-qa.md` for screenshot comparisons and findings.
