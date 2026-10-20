@@ -1,6 +1,6 @@
 # Abhay Studio
 
-A cinematic CV and portfolio for Abhay Shukla, with a midnight studio entrance, pinned scroll sequence, a Three.js neural scene, rotating GitHub gallery, project recordings, resume-grounded guide, and optional server-side AI.
+A cinematic CV and portfolio for Abhay Shukla, with a live cinematic studio entrance, pinned scroll sequence, a Three.js neural scene, rotating GitHub gallery, project recordings, resume-grounded guide, and optional server-side AI.
 
 ## Run
 
@@ -83,3 +83,13 @@ The browser surface is unavailable in this environment, so responsive visual QA,
 - `server/server.mjs`: HTTP server, static boundary, video byte ranges and security headers.
 
 Fonts and the Three.js bundle were reused from the user's existing portfolio artifact. They remain local, so the visual site has no CDN dependency.
+
+## Cinematic hero update
+
+The hero follows the supplied reel's sequence: eye close-up, pullback to the character and room, oversized name reveal, then a scroll-driven transition to a smaller portrait beside the introduction. It runs in the hero itself; the old separate timed opening overlay is removed.
+
+`hero-scene.js` manages playback, dragging, pointer parallax, keyboard scrubbing, replay, visibility and reduced-motion behavior. `hero-timeline.js` maps time and scroll to camera/portrait states. `hero-renderer.js` composites an original eye close-up, generated clean background and four transparent character keyframes using Canvas 2D at up to 30 fps. Character poses include typing, blinking, looking up and greeting. This is an interactive layered animation with four pose assets, not a fully rigged character film or a newly generated 15-second video. Krea generation remains unavailable due to zero credits.
+
+The public asset package is under one megabyte for the new scene. The local CV guide moves immediately below the cinematic hero so controls do not overlap. The existing work, experience, skills and server-side AI implementation remain available.
+
+Native Canvas renders of the production renderer were inspected at 1600×900 and 390×844. This caught and corrected an initial mobile face crop. These are renderer checks, not browser screenshots: browser interaction/visual QA remains unverified in this environment.

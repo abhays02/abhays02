@@ -1,0 +1,15 @@
+import{mix,smooth,portraitLayout}from'./hero-timeline.js';
+export function renderFrame(ctx,fg,images,options){
+const{width,height,dpr,scroll,elapsed,pointer,off,state}=options;
+function setCamera(context,state){const ratio=535/562;const layout=portraitLayout(width,height,scroll);layout.width=layout.height*ratio;const eye={x:layout.x+layout.width*.43,y:layout.y+layout.height*.13};const reveal=smooth(.06,.7,state.progress);const pivot={x:mix(eye.x,width*.5,reveal),y:mix(eye.y,height*.5,reveal)};context.translate(width*.5,height*.5);context.scale(state.zoom,state.zoom);context.translate(-pivot.x,-pivot.y);context.translate(off?0:pointer.x*10,off?0:pointer.y*7);return layout}
+function drawBackground(state){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#050b17';ctx.fillRect(0,0,width,height);ctx.save();setCamera(ctx,state);const plate=images.plate;const scale=Math.max(width/plate.width,height/plate.height);const w=plate.width*scale,h=plate.height*scale;ctx.drawImage(plate,(width-w)*.5,(height-h)*.5,w,h);
+// Light on the monitor responds continuously to pointer position.
+if(!off){const glow=ctx.createRadialGradient(width*.84,height*.46,0,width*.84,height*.46,width*.19);glow.addColorStop(0,`rgba(87,128,255,${.04+.025*Math.sin(elapsed*1.5)})`);glow.addColorStop(1,'rgba(40,90,230,0)');ctx.fillStyle=glow;ctx.fillRect(0,0,width,height)}ctx.restore();
+const shade=ctx.createLinearGradient(0,0,width,0);shade.addColorStop(0,'rgba(3,9,21,.48)');shade.addColorStop(.5,'rgba(3,9,21,.08)');shade.addColorStop(1,'rgba(3,9,21,.1)');ctx.fillStyle=shade;ctx.fillRect(0,0,width,height);
+if(!off){ctx.fillStyle='rgba(167,201,255,.35)';for(let i=0;i<24;i++){const x=((i*79.3+elapsed*(i%2?3:-2))%width+width)%width,y=(i*127.7+Math.sin(elapsed*.3+i)*14)%height;ctx.globalAlpha=.15+.25*(Math.sin(elapsed+i)+1)*.5;ctx.fillRect(x,y,1.3,1.3)}ctx.globalAlpha=1}
+if(images.eyes&&state.progress<.45){ctx.save();ctx.globalAlpha=1-smooth(.22,.45,state.progress);const eyeScale=Math.max(width/images.eyes.width,height/images.eyes.height)*mix(1.08,1,smooth(0,.3,state.progress));const ew=images.eyes.width*eyeScale,eh=images.eyes.height*eyeScale;ctx.drawImage(images.eyes,(width-ew)/2,(height-eh)/2,ew,eh);ctx.restore()}
+if(state.black>0){ctx.fillStyle=`rgba(3,8,18,${state.black})`;ctx.fillRect(0,0,width,height)}}
+
+function drawCharacter(state){fg.setTransform(dpr,0,0,dpr,0,0);fg.clearRect(0,0,width,height);fg.save();const layout=setCamera(fg,state);const pose=options.pose;const breathing=off?0:Math.sin(elapsed*1.8)*1.5;fg.translate(0,breathing);if(layout.progress>.01){fg.save();fg.globalAlpha=layout.progress;fg.fillStyle='#0b1529';fg.strokeStyle='rgba(157,177,255,.42)';fg.lineWidth=1;fg.beginPath();if(fg.roundRect)fg.roundRect(layout.x-18,layout.y-18,layout.width+36,layout.height+30,18);else fg.rect(layout.x-18,layout.y-18,layout.width+36,layout.height+30);fg.fill();fg.stroke();fg.restore()}fg.globalAlpha=images.eyes?smooth(.22,.45,state.progress):smooth(0,.022,state.progress);const sprite=images.frames[pose];fg.drawImage(sprite,130,6,535,562,layout.x,layout.y,layout.width,layout.height);fg.restore()}
+drawBackground(state);drawCharacter(state);
+}

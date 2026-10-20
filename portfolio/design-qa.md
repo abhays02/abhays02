@@ -29,3 +29,15 @@ Comparison history: no browser-based iteration occurred. No P0/P1/P2 visual find
 Next checks: capture desktop/mobile entrance and scroll states, test skip, focus, reduced motion, WebGL fallback, project carousel, video playback, timeline, tabs, copy-link behavior and AI-enabled state; fix observed issues before marking visual QA passed.
 
 final result: blocked
+
+## Cinematic hero revision
+
+Reference: reattached Video-1800.mp4, SHA-256 79550e713c880951bc813bb5444250c4ff8fb5f3a366c0e969a8e99d827fb707. Inspected 3s, 7s, 12s source frames showing the eye close-up, room reveal and portrait/about transition.
+
+Generated assets inspected: clean studio plate, four-pose transparent character sheet, extreme eye close-up. Production Canvas renderer executed in native Canvas for four timeline states (1600×900) and mobile (390×844). Evidence: /workspace/scratch/hero-eyes.png, hero-pullback.png, hero-name.png, hero-about.png, hero-mobile.png. They are not browser captures and do not establish browser QA.
+
+A mobile composition failure (face outside viewport) was fixed by centering the face pivot independently of the cropped character body. The revised native render shows the face in view; a test covers that geometric constraint. Renderer smoke rendering caught a missing function during module extraction; it was fixed before publication.
+
+Verification: 23 automated tests pass, JavaScript syntax/build checks pass, HTML/control references and local asset paths pass. Browser playback, scroll behavior, focus, native range controls and touch handling require browser review.
+
+final result: blocked

@@ -1,0 +1,7 @@
+import test from'node:test';import assert from'node:assert/strict';import{timeline,DURATION,portraitLayout,dragProgress}from'../dist/hero-timeline.js';
+test('intro starts at eye close-up, pulls back, then reveals the name',()=>{assert.equal(timeline(0).black,1);assert(timeline(.1).zoom>5);assert(timeline(.5).zoom>1);assert(timeline(.5).zoom<timeline(.1).zoom);assert.equal(timeline(1).zoom,1);assert.equal(timeline(1).title,1);assert.equal(timeline(1).frame,DURATION*30)});
+test('timeline is reversible and clamps scrubbing at both ends',()=>{assert.equal(timeline(-1).progress,0);assert.equal(timeline(2).progress,1);assert.equal(dragProgress(.5,10000,1000),1);assert.equal(dragProgress(.5,-10000,1000),0);assert(timeline(.2).zoom>timeline(.8).zoom)});
+test('scroll moves the character into the smaller portrait beside the introduction',()=>{const a=portraitLayout(1600,900,0),b=portraitLayout(1600,900,1);assert(b.x>a.x);assert(b.height<a.height);assert.equal(b.progress,1)});
+test('reduced motion uses the completed still with no forced close-up',()=>{const state=timeline(0,true);assert.equal(state.progress,1);assert.equal(state.zoom,1);assert.equal(state.black,0);assert.equal(state.title,1)});
+
+test('mobile portrait keeps the character face inside the viewport',()=>{for(const scroll of[0,.5,1]){const p=portraitLayout(390,844,scroll);const face=p.x+p.height*(535/562)*.43;assert(face>30&&face<360)}});
