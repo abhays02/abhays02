@@ -1,7 +1,8 @@
 {
-  "sourceCommit": "64acaee499c213f3c6d9364dd63b25c67b05a4fe",
+  "sourceCommit": "fdaa6a43bad1c42510e5fc6ecb1bacebec352c31",
   "sourceDirectory": "portfolio",
   "hosting": "GitHub Pages",
   "backend": false,
-  "builtAt": "2026-10-20T17:48:20.445525+00:00"
+  "hero": "cinematic-v2",
+  "builtAt": "2026-10-20T18:22:06.930336+00:00"
 }
