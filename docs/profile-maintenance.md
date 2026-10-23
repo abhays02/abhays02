@@ -1,7 +1,8 @@
 # Profile dashboard maintenance
 
-The root README is the profile entry point. The existing `portfolio/`, API,
-Vercel configuration, and `gh-pages` site are independent and unchanged.
+The root README is the profile entry point. The `portfolio/`, API,
+Vercel configuration, and published `gh-pages` site have separate deployment
+lifecycles; source edits do not by themselves update the published site.
 
 ## Published assets and refresh permissions
 
@@ -50,6 +51,10 @@ workflow before publishing, leaving the previous snapshot intact.
 - `assets/project-paths.svg` is an architecture illustration, not a screenshot
   or an assertion that a hosted service is operating.
 - `assets/neural-footer.svg` closes the same cyan/violet visual system.
+- `assets/button-*.svg` are self-contained raised link faces for the portfolio,
+  email, LinkedIn, Google Developer, and Instagram. GitHub READMEs do not execute
+  custom JavaScript or page CSS; the real hover/focus/press effects live in the
+  portfolio's contact section, not inside README images.
 - `scripts/profile_stats.py` uses Python's standard library and the GitHub CLI,
   already available on the hosted runner. Public REST pagination is explicit.
   Private repositories, forks' stars, and repositories owned by other accounts
@@ -86,11 +91,13 @@ The profile copy was checked against public source and documentation:
 | Movie recommendations | Code cells in `Movie-Recommendation-System/recommender.ipynb`: TF-IDF on overviews and `sigmoid_kernel`; collaborative filtering was not established |
 | Small ML experiments | `grokking-silence/README.md` and its documented experiment files |
 
-The old LinkedIn URL contained trailing punctuation and was not independently
-verified, so it is omitted. The existing portfolio documentation names a GitHub
-Pages site and Feastwala names a domain, but their hosts could not be resolved
-from the implementation environment; neither is presented as a verified live
-demo. No employment, education, proficiency ratings, or product metrics are added.
+The social handles were supplied by the owner as `abhays02`; Google Developer
+was explicitly confirmed as `g.dev/abhays02`. LinkedIn is also present in the
+portfolio resume. These links are not claims of independently verified account
+availability. The portfolio link uses the URL returned by the Pages API; no
+custom-domain connection is claimed. See [domain setup](custom-domain.md) for
+the verified configuration state and remaining Cloudflare/hosting steps.
+No employment, education, proficiency ratings, or product metrics are added here.
 
 The workflow configuration and locally generated animation are not proof of a
 successful GitHub-hosted run. Use the actual Actions run result to establish

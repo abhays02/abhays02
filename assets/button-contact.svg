@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="88" viewBox="0 0 220 88" role="img" aria-labelledby="title">
+<title id="title">Contact Abhay by email</title>
+<defs><linearGradient id="face" x2="0" y2="1"><stop stop-color="#473d23"/><stop offset="1" stop-color="#282517"/></linearGradient></defs>
+<rect x="6" y="15" width="208" height="66" rx="16" fill="#19170b"/><rect x="6" y="5" width="208" height="66" rx="16" fill="url(#face)" stroke="#ffdc6b"/><path d="M23 9H190" stroke="#ffffff40"/>
+<path d="M24 28H51V48H24ZM24 28L37.5 39L51 28" fill="none" stroke="#ffdc6b" stroke-width="2"/>
+<g font-family="Arial,sans-serif"><text x="67" y="33" fill="#f0f6ff" font-size="17" font-weight="700">Contact me</text><text x="67" y="53" fill="#d8cfad" font-size="12">Start a conversation</text><text x="187" y="37" fill="#ffdc6b" font-size="20">↗</text></g>
+</svg>
