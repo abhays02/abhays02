@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-labelledby="title desc">
+  <title id="title">abhays02 / NEURAL // DEVELOPER SYSTEM</title>
+  <desc id="desc">A cyan and violet neural circuit on a dark terminal. The subtitle cycles through AI/ML developer, full-stack developer, and building intelligent digital products.</desc>
+  <defs>
+    <linearGradient id="edge" x2="1" y2="1">
+      <stop stop-color="#43e7f4"/><stop offset=".55" stop-color="#476bfa"/><stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#204263" stop-opacity=".7"/><stop offset="1" stop-color="#080d17" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#213146" stroke-width=".6"/>
+    </pattern>
+    <clipPath id="typing"><rect class="reveal" x="62" y="239" width="830" height="34"/></clipPath>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+      .reveal { animation: type 15s steps(38, end) infinite; }
+      .role-one { animation: first 15s infinite; }
+      .role-two { opacity: 0; animation: second 15s infinite; }
+      .role-three { opacity: 0; animation: third 15s infinite; }
+      .pulse { animation: pulse 4s ease-in-out infinite; }
+      @keyframes type {
+        0%, 30%, 33%, 63%, 66%, 97%, 100% { width: 0; }
+        10%, 26%, 43%, 59%, 82%, 93% { width: 830px; }
+      }
+      @keyframes first { 0%, 32% { opacity: 1; } 33%, 100% { opacity: 0; } }
+      @keyframes second { 0%, 32% { opacity: 0; } 33%, 65% { opacity: 1; } 66%, 100% { opacity: 0; } }
+      @keyframes third { 0%, 65% { opacity: 0; } 66%, 100% { opacity: 1; } }
+      @keyframes pulse { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal, .role-one, .role-two, .role-three, .pulse { animation: none; }
+      }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="998" height="378" rx="18" fill="#080d17" stroke="#243349"/>
+  <rect x="2" y="2" width="996" height="376" rx="17" fill="url(#grid)" opacity=".55"/>
+  <ellipse cx="817" cy="185" rx="300" ry="260" fill="url(#halo)"/>
+  <path d="M24 62V24H142M858 356H976V318" fill="none" stroke="url(#edge)" stroke-width="2"/>
+  <text x="62" y="57" fill="#43e7f4" font-size="13" letter-spacing="3">NEURAL // DEVELOPER SYSTEM</text>
+  <circle cx="810" cy="52" r="3" fill="#43e7f4"/>
+  <text x="824" y="57" fill="#8eacc1" font-size="11" letter-spacing="1">PROFILE / 02</text>
+  <path d="M62 82H938" stroke="#243349"/>
+  <g fill="none" stroke="url(#edge)" stroke-width="1.5" opacity=".55">
+    <path d="M755 124L824 102L901 145L934 215L875 265L790 245L755 124L901 145L790 245L824 102L875 265L934 215L755 124"/>
+    <circle cx="838" cy="184" r="93" stroke-dasharray="3 12"/>
+    <circle cx="838" cy="184" r="111" stroke="#243349"/>
+  </g>
+  <g fill="#43e7f4" class="pulse">
+    <circle cx="755" cy="124" r="4"/><circle cx="901" cy="145" r="4"/><circle cx="790" cy="245" r="4"/>
+  </g>
+  <g fill="#a78bfa"><circle cx="824" cy="102" r="4"/><circle cx="934" cy="215" r="4"/><circle cx="875" cy="265" r="4"/></g>
+  <text x="58" y="199" fill="#f0f5ff" font-size="92" font-weight="700" letter-spacing="-6">abhays02<tspan fill="#43e7f4">_</tspan></text>
+  <g clip-path="url(#typing)" fill="#43e7f4" font-size="22">
+    <text class="role-one" x="62" y="264">&gt; AI/ML Developer</text>
+    <text class="role-two" x="62" y="264">&gt; Full-Stack Developer</text>
+    <text class="role-three" x="62" y="264">&gt; Building intelligent digital products</text>
+  </g>
+  <path d="M62 305H938" stroke="#243349"/>
+  <text x="62" y="337" fill="#91a3bc" font-size="12" letter-spacing="2">IDEAS / MODELS / INTERFACES</text>
+  <text x="938" y="337" text-anchor="end" fill="#a78bfa" font-size="12">BUILD. INSPECT. ITERATE.</text>
+</svg>

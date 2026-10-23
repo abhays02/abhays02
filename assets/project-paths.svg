@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="232" viewBox="0 0 1000 232" role="img" aria-labelledby="title desc">
+  <title id="title">Selected systems / architecture index</title>
+  <desc id="desc">ICR Studios: scan, human review, export. Fake News Detection: article, local classifier, prediction. Feastwala: menu, cart, order. These are architecture illustrations, not application screenshots.</desc>
+  <defs>
+    <linearGradient id="line"><stop stop-color="#43e7f4"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#7186ac"/></marker>
+  </defs>
+  <rect x="1" y="1" width="998" height="230" rx="12" fill="#080d17" stroke="#243349"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16">
+    <text x="30" y="37" fill="#91a3bc" font-size="11" letter-spacing="2">SYSTEM MAP / SOURCE-GROUNDED PATHS</text>
+    <path d="M30 52H970M30 109H970M30 166H970" stroke="#1d2b40"/>
+    <g fill="#f0f5ff">
+      <text x="30" y="87">01 / ICR STUDIOS</text>
+      <text x="30" y="144">02 / FAKE NEWS</text>
+      <text x="30" y="201">03 / FEASTWALA</text>
+    </g>
+    <g fill="#43e7f4">
+      <text x="350" y="87">SCAN</text><text x="350" y="144">ARTICLE</text><text x="350" y="201">MENU</text>
+    </g>
+    <g fill="#b5c6dc">
+      <text x="545" y="87">HUMAN REVIEW</text><text x="545" y="144">LOCAL CLASSIFIER</text><text x="545" y="201">CART</text>
+    </g>
+    <g fill="#a78bfa">
+      <text x="815" y="87">JSON / CSV</text><text x="815" y="144">PREDICTION</text><text x="815" y="201">ORDER</text>
+    </g>
+  </g>
+  <g stroke="url(#line)" marker-end="url(#arrow)">
+    <path d="M452 81H513M452 138H513M452 195H513M733 81H783M733 138H783M733 195H783"/>
+  </g>
+</svg>
