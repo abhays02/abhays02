@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="244" viewBox="0 0 440 244" role="img" aria-labelledby="title desc">
+  <title id="title">LANGUAGE FOOTPRINT</title>
+  <desc id="desc">Number of original public repositories by primary language, not code volume. Python: 9, HTML: 2, JavaScript: 2, TypeScript: 2, Jupyter Notebook: 1</desc>
+  <rect x="1" y="1" width="438" height="242" rx="12" fill="#080d17" stroke="#243349"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace">
+    <path d="M24 52H416M24 208H416" stroke="#243349"/>
+    <text x="24" y="32" fill="#43e7f4" font-size="12" letter-spacing="1.4">LANGUAGE FOOTPRINT</text>
+    <text x="24" y="75" fill="#91a3bc" font-size="10">ORIGINAL REPOS / PRIMARY LANGUAGE / TOP 5</text><text x="24" y="97" fill="#b5c6dc" font-size="12">Python</text><rect x="180" y="89" width="190.0" height="5" rx="2" fill="#43e7f4"/><text x="412" y="97" text-anchor="end" fill="#f0f5ff" font-size="12">9</text><text x="24" y="119" fill="#b5c6dc" font-size="12">HTML</text><rect x="180" y="111" width="42.2" height="5" rx="2" fill="#a78bfa"/><text x="412" y="119" text-anchor="end" fill="#f0f5ff" font-size="12">2</text><text x="24" y="141" fill="#b5c6dc" font-size="12">JavaScript</text><rect x="180" y="133" width="42.2" height="5" rx="2" fill="#719bff"/><text x="412" y="141" text-anchor="end" fill="#f0f5ff" font-size="12">2</text><text x="24" y="163" fill="#b5c6dc" font-size="12">TypeScript</text><rect x="180" y="155" width="42.2" height="5" rx="2" fill="#56c9b5"/><text x="412" y="163" text-anchor="end" fill="#f0f5ff" font-size="12">2</text><text x="24" y="185" fill="#b5c6dc" font-size="12">Jupyter Notebook</text><rect x="180" y="177" width="21.1" height="5" rx="2" fill="#b4a0ed"/><text x="412" y="185" text-anchor="end" fill="#f0f5ff" font-size="12">1</text>
+    <text x="24" y="229" fill="#91a3bc" font-size="10">PUBLIC API / 2026-10-23 05:10 UTC</text>
+  </g>
+</svg>
