@@ -42,6 +42,10 @@ Without a configured model and key, the clearly labelled local resume guide rema
 
 ## Vercel deployment
 
+For `abhays02.tech`, follow the [Cloudflare custom-domain guide](../docs/custom-domain.md).
+It covers full-stack Vercel hosting, the static Pages alternative, HTTPS,
+origin settings, and the checks needed before changing public portfolio links.
+
 The repository root includes `vercel.json` and three serverless entries under `api/`. Import `abhays02/abhays02` into Vercel with **Root Directory = repository root**, **Framework Preset = Other**, **Production Branch = main**. Build and output settings are supplied by `vercel.json`; Vercel installs the runtime identity helper from the root lockfile. The profile README remains at the repository root.
 
 The build generates private server-side resume context from `content/resume.txt` and public project metadata, and publishes only `portfolio/dist` as static files. API entries reuse the tested provider adapters. No keys are included in the build output.
@@ -86,6 +90,9 @@ Chromium is available for the current redesign. See `design-qa.md` for the rende
 - `dist/site-config.json`: enables the same-origin backend for Node hosting; set `backend: false` for static-only GitHub Pages.
 - `dist/index.html`: page sections and accessible controls.
 - `dist/style.css`: layout, responsive rules and motion.
+- The contact section includes email, LinkedIn, Google Developer (`g.dev`),
+  Instagram, GitHub, and resume links. Social handles are `abhays02`; elevated
+  cards support hover, keyboard focus, press feedback, and reduced motion.
 - `dist/app.js`: intro, scroll sequencing, CV UI, AI/fallback guide and sharing.
 - `dist/neural.js`: Three.js scene and reduced-motion/WebGL fallback.
 - `dist/projects.js`: rotating gallery, recordings, project explainers and GitHub sync.

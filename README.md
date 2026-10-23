@@ -3,9 +3,20 @@
 </p>
 
 <p align="center">
-  <strong>Turn an idea into a system. Make the system useful.</strong><br />
-  Machine-learning experiments, thoughtful interfaces, and the software connecting them.
+  <strong>I build the model. The interface. And the path between them.</strong><br />
+  Scanned forms, language experiments, full-stack products. Open the work, not just the pitch.
 </p>
+
+<p align="center">
+  <a href="https://abhays02.github.io/abhays02/"><img src="assets/button-portfolio.svg" width="220" alt="Enter my interactive portfolio" /></a>
+  <a href="mailto:shuklaabhay075@gmail.com"><img src="assets/button-contact.svg" width="220" alt="Contact me by email" /></a>
+  <br />
+  <a href="https://www.linkedin.com/in/abhays02/"><img src="assets/button-linkedin.svg" width="220" alt="LinkedIn — abhays02" /></a>
+  <a href="https://g.dev/abhays02"><img src="assets/button-gdev.svg" width="220" alt="Google Developer — abhays02" /></a>
+  <a href="https://www.instagram.com/abhays02/"><img src="assets/button-instagram.svg" width="220" alt="Instagram — abhays02" /></a>
+</p>
+
+<p align="center"><sub>One handle: <strong>@abhays02</strong>. Raised buttons here; hover, focus, and press interactions in the portfolio.</sub></p>
 
 <p align="center">
   <a href="#about">ABOUT</a> &nbsp; / &nbsp;
@@ -112,8 +123,12 @@ These cards use GitHub's public repository API. Language counts reflect each ori
 
 ## CONNECT
 
-Open to collaborating on useful software, applied ML, and open-source projects. Start with a repository: explore the code, open an issue, or bring a concrete idea.
+Have a messy workflow, an ML experiment, or a product that needs building? Bring the problem. I like connecting the pieces.
 
-[**EXPLORE ALL PUBLIC REPOSITORIES →**](https://github.com/abhays02?tab=repositories) &nbsp; / &nbsp; [**FIND ME ON GITHUB →**](https://github.com/abhays02)
+**Direct line:** [Email me](mailto:shuklaabhay075@gmail.com) · [LinkedIn](https://www.linkedin.com/in/abhays02/) · [Google Developer](https://g.dev/abhays02) · [Instagram](https://www.instagram.com/abhays02/) · [GitHub](https://github.com/abhays02)
+
+**Go deeper:** [Interactive portfolio](https://abhays02.github.io/abhays02/) · [All public repositories](https://github.com/abhays02?tab=repositories)
+
+<sub>Custom domain setup for <code>abhays02.tech</code>: [Cloudflare connection guide](docs/custom-domain.md). The domain is not presented as connected until hosting, DNS, and HTTPS are verified.</sub>
 
 <img src="assets/neural-footer.svg" width="1000" alt="End of transmission. Keep the curiosity. Build the next thing." />

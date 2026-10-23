@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="88" viewBox="0 0 220 88" role="img" aria-labelledby="title">
+<title id="title">Enter Abhay's interactive portfolio</title>
+<defs><linearGradient id="face" x2="0" y2="1"><stop stop-color="#382d59"/><stop offset="1" stop-color="#1c1934"/></linearGradient></defs>
+<rect x="6" y="15" width="208" height="66" rx="16" fill="#100d23"/><rect x="6" y="5" width="208" height="66" rx="16" fill="url(#face)" stroke="#b7a0ff"/><path d="M23 9H190" stroke="#ffffff40"/>
+<g fill="none" stroke="#b7a0ff" stroke-width="2"><path d="M25 31L38 24L51 31V46L38 53L25 46ZM25 31L38 38L51 31M38 38V53"/></g>
+<g font-family="Arial,sans-serif"><text x="67" y="33" fill="#f0f6ff" font-size="17" font-weight="700">My portfolio</text><text x="67" y="53" fill="#c6bddf" font-size="12">Enter my world</text><text x="187" y="37" fill="#b7a0ff" font-size="20">↗</text></g>
+</svg>
